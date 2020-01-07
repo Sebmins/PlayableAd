@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D Buca - Seb Waring</title>
+    <link rel="stylesheet" href="main.css">
+    <style> 
+        #Buca{
+            border: 2px solid #FFF;
+            position: absolute;
+            margin :auto;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var index = Math.round(Math.random() * 3);
+        var ColourBg = "06366D"; // default color - white (index = 0)
+        var ColourOutline = "46D3AC"; // default color - white (index = 0)
+        var ColourFill = "EDB566"; // default color - white (index = 0)
+        
+        if(index == 1){
+            ColourBg = "674d3c"; 
+            ColourOutline = "ff6f69";
+            ColourFill = "ffcc5c";
+        }
+        if(index == 2){
+            ColourBg = "3F1D55";
+            ColourOutline = "46D3AC";
+            ColourFill = "FDBFFE";
+        }
+        if(index == 3){
+            ColourBg = "2F4F4F";
+            ColourOutline = "0496FF";
+            ColourFill = "eee";
+        }
+        
+        document.documentElement.style
+        .setProperty('--bg', "#" + ColourBg);
+        document.documentElement.style
+        .setProperty('--outline', "#" + ColourOutline);
+        document.documentElement.style
+        .setProperty('--fill', "#" + ColourFill);
+    </script>
+    
+    <canvas id="Buca" width="315" height="510"></canvas>
+    
+    <script src="debug.js"></script>
+    <script src="components.js"></script>
+    <script src="hole.js"></script>
+    <script src="puck.js"></script>
+    <script src="mouse.js"></script>
+    <script src="level1.js"></script>
+    <script src="level2.js"></script>
+    <script src="level3.js"></script>
+    <script src="level4.js"></script>
+    <script src="level5.js"></script>
+    <script src="level6.js"></script>
+    <script src="collision.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
